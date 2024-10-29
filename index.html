@@ -3,25 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIP</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-        h1 {
-            font-size: 3em;
-            color: #f0f0f0;
-        }
-    </style>
+    <title>Map Makers and Programmers</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<h1>WIP</h1>
+<!-- Background Video -->
+<video autoplay muted loop id="background-video">
+    <source src="assets/background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<!-- Overlay Content -->
+<div class="overlay">
+    <!-- Header Section -->
+    <div class="header-bar">
+        <div class="profile-info">
+            <img src="assets/star-icon.png" alt="Star Icon" class="star-icon">
+            <span id="username" class="username" onclick="editUsername()">Click to change</span>
+            <div class="xp-bar">
+                <div class="xp-fill"></div>
+            </div>
+            <span class="xp-text">903 388 / 1 000 000</span>
+        </div>
+        <h1 class="title">Map Makers and Programmers</h1>
+        <div class="currency-info">
+                <span class="currency">
+                    <img src="assets/diamond-icon.svg" alt="Diamond Icon" class="currency-icon"> 68 800
+                </span>
+            <span class="currency">
+                    <img src="assets/ruby-icon.svg" alt="Ruby Icon" class="currency-icon"> 12
+                </span>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="content">
+        <div class="menu-container">
+            <a href="https://discord.com" class="discord-button" target="_blank">Discord</a>
+            <ul class="menu">
+                <li><a href="archives.html"><img src="assets/archives-icon.svg" class="button-icon" alt="Archives Icon">ARCHIVES</a></li>
+                <li><a href="tools.html"><img src="assets/tools-icon.svg" class="button-icon" alt="Tools Icon">TOOLS</a></li>
+                <li><a href="misc.html"><img src="assets/misc-icon.svg" class="button-icon" alt="Misc Icon">MISC</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    function editUsername() {
+        const currentUsername = document.getElementById('username').innerText;
+        const newUsername = prompt('Enter new username:', currentUsername);
+        if (newUsername && newUsername.trim() !== '') {
+            document.getElementById('username').innerText = newUsername;
+        }
+    }
+</script>
 </body>
 </html>
