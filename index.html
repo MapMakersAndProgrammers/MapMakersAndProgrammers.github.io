@@ -3,60 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map Makers and Programmers</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Map Makers & Programmers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-<!-- Background Video -->
-<video autoplay muted loop id="background-video">
-    <source src="assets/background.mp4" type="video/mp4">
+<div class="noise-overlay"></div>
+<video id="background-video" autoplay loop muted>
+    <source src="./assets/background.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 
-<!-- Overlay Content -->
 <div class="overlay">
-    <!-- Header Section -->
-    <div class="header-bar">
-        <div class="profile-info">
-            <img src="assets/star-icon.png" alt="Star Icon" class="star-icon">
-            <span id="username" class="username" onclick="editUsername()">Click to change</span>
-            <div class="xp-bar">
-                <div class="xp-fill"></div>
-            </div>
-            <span class="xp-text">903 388 / 1 000 000</span>
-        </div>
-        <h1 class="title">Map Makers and Programmers</h1>
-        <div class="currency-info">
-                <span class="currency">
-                    <img src="assets/diamond-icon.svg" alt="Diamond Icon" class="currency-icon"> 68 800
-                </span>
-            <span class="currency">
-                    <img src="assets/ruby-icon.svg" alt="Ruby Icon" class="currency-icon"> 12
-                </span>
-        </div>
-    </div>
+    <main class="content-wrapper">
+        <h1 class="main-title">Map makers & Programmers</h1>
 
-    <!-- Main Content Area -->
-    <div class="content">
-        <div class="menu-container">
-            <a href="https://discord.gg/EPqvgcPNHx" class="discord-button" target="_blank">Discord</a>
-            <ul class="menu">
-                <li><a href="archives.html"><img src="assets/archives-icon.svg" class="button-icon" alt="Archives Icon">ARCHIVES</a></li>
-                <li><a href="tools.html"><img src="assets/tools-icon.svg" class="button-icon" alt="Tools Icon">TOOLS</a></li>
-                <li><a href="misc.html"><img src="assets/misc-icon.svg" class="button-icon" alt="Misc Icon">MISC</a></li>
-            </ul>
+        <div class="centered-navigation">
+            <nav class="main-navigation">
+                <a href="archives.html" class="nav-button">
+                    <img src="assets/archives-icon.svg" alt="Archives" class="button-icon">
+                    ARCHIVES
+                </a>
+                <a href="tools.html" class="nav-button">
+                    <img src="assets/tools-icon.svg" alt="Tools" class="button-icon">
+                    TOOLS
+                </a>
+                <a href="misc.html" class="nav-button">
+                    <img src="assets/misc-icon.svg" alt="Misc" class="button-icon">
+                    MISC
+                </a>
+            </nav>
         </div>
-    </div>
+
+        <div class="cta-section">
+            <a href="https://discord.gg/EPqvgcPNHx" target="_blank" class="discord-button">
+                Join The Discord
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Map Makers & Programmers. A few rights reserved...</p>
+        </div>
+    </footer>
 </div>
 
-<script>
-    function editUsername() {
-        const currentUsername = document.getElementById('username').innerText;
-        const newUsername = prompt('Enter new username:', currentUsername);
-        if (newUsername && newUsername.trim() !== '') {
-            document.getElementById('username').innerText = newUsername;
-        }
-    }
-</script>
-</body>
-</html>
