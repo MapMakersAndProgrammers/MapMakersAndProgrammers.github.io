@@ -1,0 +1,157 @@
+/* Repository Explorer Specific Styles */
+.repo-explorer {
+    padding: 50px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.file-tree {
+    background-color: rgba(75, 93, 103, 0.2);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.file-item:hover {
+    background-color: rgba(75, 93, 103, 0.3);
+}
+
+.file-icon {
+    margin-right: 15px;
+    width: 24px;
+    height: 24px;
+}
+
+.file-name {
+    flex-grow: 1;
+}
+
+.file-size {
+    color: var(--accent-color);
+    margin-left: 15px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    content: '›';
+    margin-left: 10px;
+    color: var(--accent-color);
+}
+
+.breadcrumb-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: #32ff32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file-size {
+        margin-left: 40px;
+        margin-top: 5px;
+    }
+}
+
+.readme-section {
+    background-color: rgba(75, 93, 103, 0.2);
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+.readme-content {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.readme-content h1,
+.readme-content h2,
+.readme-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.readme-content h1 { font-size: 2rem; }
+.readme-content h2 { font-size: 1.5rem; }
+.readme-content h3 { font-size: 1.25rem; }
+
+.readme-content p {
+    margin-bottom: 15px;
+}
+
+.readme-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.readme-content a:hover {
+    color: #32ff32;
+    text-decoration: underline;
+}
+
+.readme-content code {
+    background-color: rgba(75, 93, 103, 0.3);
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.readme-content pre {
+    background-color: rgba(75, 93, 103, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+}
+
+.readme-content ul,
+.readme-content ol {
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.readme-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .readme-content h1 { font-size: 1.5rem; }
+    .readme-content h2 { font-size: 1.25rem; }
+    .readme-content h3 { font-size: 1rem; }
+}
